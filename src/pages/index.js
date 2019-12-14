@@ -45,6 +45,7 @@ const IndexPage = ({data}) => {
             <p
                 sx={{
                     color: '#777',
+                    mt: 4,
                     'a': {
                         textDecoration: 'none',
                         borderBottom: '1px solid #777',
