@@ -9,7 +9,6 @@ const IndexPage = ({data}) => {
             <h1
                 sx={{
                     color: 'headingText',
-                    fontFamily: 'body',
                     my: 4,
                 }}
             >
@@ -26,14 +25,14 @@ const IndexPage = ({data}) => {
                         }}
                     >
                         <h2
-                            dangerouslySetInnerHTML={{__html: (sheet.lesson ? sheet.date : '')}}
+                            dangerouslySetInnerHTML={{__html: (sheet.lesson ? sheet.date : null)}}
                             sx={{
                                 color: '#336',
                                 margin: '0 1rem 1rem 0',
                             }}
                         ></h2>
                         <p
-                            dangerouslySetInnerHTML={{__html: sheet.lesson}}
+                            dangerouslySetInnerHTML={{__html: sheet.lesson ? sheet.lesson : null}}
                             sx={{
                                 color: '#14132c',
                                 lineHeight: '150%',
@@ -43,6 +42,24 @@ const IndexPage = ({data}) => {
                     </article>
                 )
             })}
+            <p
+                sx={{
+                    color: '#777',
+                    'a': {
+                        textDecoration: 'none',
+                        borderBottom: '1px solid #777',
+                        paddingBottom: '2px',
+                        transition: '.15s',
+                        color: '#777'
+                    },
+                    'a:hover': {
+                        color: '#444',
+                        borderBottom: '1px solid #444'
+                    }
+                }}
+            >
+                made with ♥ by <a href="https://katmh.com">kat huang</a>
+            </p>
         </Layout>
     )
     
