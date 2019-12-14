@@ -1,11 +1,9 @@
-/**
- * Configure your Gatsby site with this file.
- *
- * See: https://www.gatsbyjs.org/docs/gatsby-config/
- */
-
 module.exports = {
-  /* Your site config here */
+  siteMetadata: {
+    title: `learned - Kat Huang`,
+    url: `https://katmh.com/learned`,
+    description: `chronicling something I've learned each day`
+  },
   plugins: [
     {
       resolve: `gatsby-source-rest-api`,
